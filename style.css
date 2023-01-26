@@ -11,18 +11,24 @@ body {
 }
 #container {
     max-width: 1200px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
+    width: fit-content;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
+    margin-left: 1rem;
+    border-bottom: 1px black solid;
+}
+.row {
+    max-width: 1200px;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    border-right: 1px black solid;
 }
 .square {
-    border: 1px black solid;
-    min-height: 2em;
-    flex: 0 0 2em;
+    border-top: 1px black solid;
+    border-left: 1px black solid;
+    min-height: 2rem;
+    min-width: 2rem;
 }
-/* .square:hover {
-    background-color: gray;
-    transition: all .3s;
-} */
