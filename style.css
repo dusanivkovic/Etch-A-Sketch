@@ -42,16 +42,21 @@
 .row:last-child > .square {
     border-bottom: 1px black solid;
 }
-.square-hover {
+#square-hover {
     background-color:var(--pen-color)!important;
 }
 button {
     margin: 15px 0;
-    padding: 5px 10px;
+    padding: 5px 4rem;
     border-radius: 15px;
     background-color: crimson;
-        color: white;
+    color: white;
     font-weight: 700;
+    cursor: pointer;
+}
+button:hover {
+    border: 2px crimson solid;
+    transition: .3s ease;
 }
 .slider-box {
     background-color: burlywood;
@@ -63,4 +68,8 @@ h1 {
     margin: 20px;
     color: crimson;
     font-weight: 700;
+}
+input {
+    margin: 5px 0 0;
+    width: 8rem;
 }
