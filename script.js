@@ -27,9 +27,6 @@ function squareHover(box) {
         if (eraser.matches('.on')) {
             erase(e);
         } else if (rainbow.matches('.on')) {
-            // if (box.target.matches('#square-hover') === false) {
-            //     console.log('hi')
-            // }
             console.log(container)
             rainbowColorHover(e);
         }
@@ -39,11 +36,10 @@ function squareHover(box) {
     })
 }
 function erase(para) {
-    if (para.target.matches('#rainbow')) {
-        para.target.removeAttribute('style');
-        para.target.removeAttribute('id'); 
+    if (para.target.matches('#rainbow')||(para.target.matches('#square-hover'))) {
+        para.target.removeAttribute('style');   // Remove style attribute with background-color property
+        para.target.removeAttribute('id');     //delete hover ID to the square
     }
-    //delete hover ID to the square
 }
 function addHover(para) {
     if (para.target.matches('.square')) {
