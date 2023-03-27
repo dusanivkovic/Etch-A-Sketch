@@ -42,7 +42,7 @@
 .row:last-child > .square {
     border-bottom: 1px black solid;
 }
-#square-hover {
+[data-id = 'square-hover'] {
     background-color:var(--pen-color)!important;
 }
 button {

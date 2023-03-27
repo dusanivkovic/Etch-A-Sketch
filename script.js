@@ -36,14 +36,14 @@ function squareHover(box) {
     })
 }
 function erase(para) {
-    if (para.target.matches('#rainbow')||(para.target.matches('#square-hover'))) {
+    if ((para.target.dataset.id =='rainbow')||(para.target.dataset.id =='square-hover')) {
         para.target.removeAttribute('style');   // Remove style attribute with background-color property
-        para.target.removeAttribute('id');     //delete hover ID to the square
+        para.target.removeAttribute('data-id');     //delete hover ID to the square
     }
 }
 function addHover(para) {
     if (para.target.matches('.square')) {
-        para.target.setAttribute('id','square-hover');
+        para.target.dataset.id = 'square-hover';
     }
     // Adding hover ID to the element width class "square"
 }
@@ -53,7 +53,7 @@ function rainbowColorHover(para) {
     // root.style.setProperty('--pen-color', rainbowColors[i]);
     if (para.target.matches('.square')) {
         para.target.style.backgroundColor = rainbowColors[i];
-        para.target.setAttribute('id', 'rainbow');
+        para.target.dataset.id = 'rainbow';
         console.log('yea')
     }
 }
